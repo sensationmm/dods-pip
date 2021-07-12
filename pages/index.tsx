@@ -1,9 +1,10 @@
+import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-text="page-home">
       <Head>
         <title>Dods PIP</title>
         <link rel="icon" href="/favicon.ico" />
@@ -14,4 +15,6 @@ export default function Home() {
       </main>
     </div>
   );
-}
+};
+
+export default Home;
