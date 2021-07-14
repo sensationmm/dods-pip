@@ -25,6 +25,8 @@
     "@storybook/addon-essentials": "^6.3.4",
     "@storybook/addon-links": "^6.3.4",
     "@storybook/react": "^6.3.4",
+    "@types/enzyme": "^3.10.9",
+    "@types/jest": "^26.0.24",
     "@types/react": "17.0.14",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
