@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming';
-import Logo from '../assets/logo-white.png';
-import color from '../globals/color';
+import Logo from '../src/assets/logo-white.png';
+import color from '../src/globals/color';
 
 export default create({
   appBg: color.theme.blue,
