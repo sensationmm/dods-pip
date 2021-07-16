@@ -9,7 +9,9 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest --watch --coverage"
+    "test": "jest --watch --coverage",
+    "docker-build": "docker build . -t dods-pip",
+    "docker": "docker run -p 3000:3000 dods-pip"
   },
   "dependencies": {
     "next": "11.0.1",
@@ -36,6 +38,7 @@
     "eslint-config-next": "11.0.1",
     "eslint-plugin-enzyme": "^0.2.0",
     "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-react": "^7.24.0",
     "jest": "^27.0.6",
     "react-test-renderer": "^17.0.2",
     "ts-jest": "^27.0.3",
