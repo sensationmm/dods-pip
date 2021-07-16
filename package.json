@@ -12,7 +12,8 @@
     "test": "jest",
     "test:watch": "jest --watch --coverage",
     "docker-build": "docker build . -t dods-pip",
-    "docker": "docker run -p 3000:3000 dods-pip"
+    "docker": "docker run -p 3000:3000 dods-pip",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "next": "11.0.1",
