@@ -10,7 +10,7 @@ const Home = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Hello Dods PIP!</h1>
+        <h1 className={styles.title}>Hello Dods PIP!!</h1>
       </main>
     </div>
   );
