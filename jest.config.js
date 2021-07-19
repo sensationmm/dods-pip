@@ -16,6 +16,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/setup-test-env.js'],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
+    '!src/**/*.stories.{ts,tsx}',
     '!src/**/_app.tsx',
     '!coverage',
     '!src/globals/**/*.{ts,tsx}',
