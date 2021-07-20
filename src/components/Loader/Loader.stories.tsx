@@ -3,4 +3,4 @@ import { storiesOf } from '@storybook/react';
 
 import Loader from '.';
 
-storiesOf('Core/Loader', module).add('Default', () => <Loader />);
+storiesOf('Core/Loader', module).add('Default', () => <Loader />, { layout: 'fullscreen' });

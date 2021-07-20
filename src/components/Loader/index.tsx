@@ -1,13 +1,18 @@
 import Lottie from 'react-lottie';
 import animationData from './dods-loader.json';
 
-const Loader = () => {
+import * as Styled from './Loader.styles';
+
+const Loader: React.FC = () => {
   return (
-    <Lottie
-      options={{ loop: true, autoplay: true, animationData: animationData }}
-      height={40}
-      width={40}
-    />
+    <Styled.mask>
+      {/* TODO: add mask color/opacity once design chooses one */}
+      <Lottie
+        options={{ loop: true, autoplay: true, animationData: animationData }}
+        height={40}
+        width={40}
+      />
+    </Styled.mask>
   );
 };
 
