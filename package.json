@@ -19,7 +19,8 @@
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-lottie": "^1.2.3"
+    "react-lottie": "^1.2.3",
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -34,8 +35,10 @@
     "@types/jest": "^26.0.24",
     "@types/react": "17.0.14",
     "@types/react-lottie": "^1.2.6",
+    "@types/styled-components": "^5.1.11",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.13.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "7.30.0",
