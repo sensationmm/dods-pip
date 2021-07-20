@@ -5,7 +5,7 @@ import * as Styled from './Loader.styles';
 
 const Loader: React.FC = () => {
   return (
-    <Styled.mask>
+    <Styled.mask data-test={'component-loader'}>
       {/* TODO: add mask color/opacity once design chooses one */}
       <Lottie
         options={{ loop: true, autoplay: true, animationData: animationData }}
