@@ -12,6 +12,7 @@ export default {
   controls: { hideNoControlsWarning: true },
   argTypes: {
     src: {
+      defaultValue: Icons.IconCross,
       options: Object.keys(Icons),
       mapping: Icons,
       control: {
@@ -22,6 +23,7 @@ export default {
       options: Object.keys(IconSize),
       mapping: IconSize,
       control: {
+        defaultValue: IconSize.small,
         type: 'select',
         labels: {
           [IconSize.small]: 'small',
@@ -34,6 +36,7 @@ export default {
       options: Object.keys(color.theme),
       mapping: color.theme,
       control: {
+        defaultValue: color.theme.blueLight,
         type: 'select',
         labels: {
           [color.theme.blueLight]: 'color.theme.blueLight',
@@ -49,5 +52,3 @@ export default {
 const Template: Story<IconProps> = (args) => <Icon {...args} />;
 
 export const Primary = Template.bind({});
-
-// Primary.args = { isActive};

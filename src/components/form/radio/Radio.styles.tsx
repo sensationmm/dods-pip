@@ -70,6 +70,7 @@ export const radioInput = styled.input`
 
 export const radioInputDisabled = styled(radioInput)`
   pointer-events: none;
+  cursor: not-allowed;
 
   &::before {
     border-color: ${colorDisabled};

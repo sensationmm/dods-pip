@@ -30,3 +30,7 @@ Primary.args = {
   label: 'first',
   value: 'first',
 };
+
+Primary.parameters = {
+  controls: { include: ['label', 'isChecked', 'isDisabled'] },
+};
