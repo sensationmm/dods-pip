@@ -17,6 +17,7 @@ const Toggle: React.FC<ToggleProps> = ({ isActive = false, isDisabled = false, o
 
   const trigger = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.code === 'Space') {
+      event.preventDefault();
       onChange(!isActive);
     }
   };
@@ -25,7 +26,7 @@ const Toggle: React.FC<ToggleProps> = ({ isActive = false, isDisabled = false, o
     <Styled.wrapper
       data-test="component-toggle"
       onKeyDown={trigger}
-      onClick={() => onChange(!isActive)}
+      onClick={() => (isDisabled ? null : onChange(!isActive))}
       tabIndex={0}
     >
       <Component className={classNames({ disabled: isDisabled })}>
