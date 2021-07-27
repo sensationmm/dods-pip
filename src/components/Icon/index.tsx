@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next';
 
 import colorPalette from '../../globals/color';
 import IconLibrary, { Icons } from './assets';
