@@ -1,12 +1,12 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 
-import Text, { ColorStyles, TextStyles } from '.';
+import Text, { ColorStyles } from '.';
 
 describe('Text', () => {
   const props = {
     children: 'text goes here',
-    type: TextStyles.h3,
+    type: 'h3',
   };
 
   it('renders without error', () => {
@@ -19,13 +19,29 @@ describe('Text', () => {
     expect(wrapper.find('[data-test="component-text"]').type().target).toEqual('p');
   });
 
-  it('should render the given prop type as the html tag', () => {
+  it('renders the given prop type as the html tag', () => {
     const wrapper = shallow(<Text {...props} />);
     expect(wrapper.find('[data-test="component-text"]').type().target).toEqual(props.type);
   });
 
-  it('should render the given child in the html tag', () => {
+  it('renders the given child in the html tag', () => {
     const wrapper = shallow(<Text {...props} />);
     expect(wrapper.find('[data-test="component-text"]').text()).toEqual(props.children);
+  });
+
+  it('renders the default style', () => {
+    const wrapper = shallow(<Text {...props} />);
+    const component = wrapper.find('[data-test="component-text"]');
+
+    let containerStyle = component.get(0).props.style;
+    expect(containerStyle.fontWeight).toEqual('normal');
+  });
+
+  it('renders the bold style', () => {
+    const wrapper = shallow(<Text {...props} bold={true} />);
+    const component = wrapper.find('[data-test="component-text"]');
+
+    let containerStyle = component.get(0).props.style;
+    expect(containerStyle.fontWeight).toEqual('bold');
   });
 });

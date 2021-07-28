@@ -4,7 +4,6 @@ import opacity from '../../../globals/opacity';
 import { hexAToRGBA } from '../../../utils/color';
 
 export const wrapper = styled.div`
-  cursor: pointer;
   position: relative;
   outline: 0;
 
@@ -40,6 +39,7 @@ export const control = styled.div`
 `;
 
 export const toggle = styled.div`
+  cursor: pointer;
   position: relative;
   width: 48px;
   height: 24px;

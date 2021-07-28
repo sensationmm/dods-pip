@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import Text, { ColorStyles, TextStyles } from '../../Text';
+import Text from '../../Text';
 
 import * as Styled from './Radio.styles';
 
@@ -55,7 +55,7 @@ const Radio: React.FC<IRadioProps> = ({
         checked={isChecked}
         className={classNames({ disabled: isDisabled })}
       />
-      <Text htmlFor={id} type={TextStyles.label}>
+      <Text htmlFor={id} type={'label'}>
         {label}
       </Text>
     </Styled.radio>

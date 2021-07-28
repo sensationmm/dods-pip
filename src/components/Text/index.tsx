@@ -2,44 +2,42 @@
 import * as React from 'react';
 import { StyledComponent } from 'styled-components';
 
+import colorPalette from '../../globals/color';
 import * as Styled from './Text.styles';
 
-export enum TextStyles {
-  h1 = 'h1',
-  h2 = 'h2',
-  h3 = 'h3',
-  body = 'body',
-  label = 'label',
-}
-
-export enum ColorStyles {
-  primary = 'primary',
-  secondary = 'secondary',
-  tertiary = 'tertiary',
-}
+type TextStyles = 'h1' | 'h2' | 'h3' | 'p' | 'label' | 'span';
 
 interface ITextProps {
   children?: React.ReactNode;
   className?: string;
   type?: TextStyles;
-  color?: ColorStyles;
-  [prop: string]: any;
+  color?: string;
+  bold?: boolean;
+  htmlFor?: string;
 }
 
 const Text: React.FC<ITextProps> = ({
   className,
   children,
-  type = TextStyles.body,
-  color = ColorStyles.primary,
-  ...props
+  type = 'p',
+  color = colorPalette.base.grey,
+  bold = false,
+  htmlFor,
 }) => {
   // TODO: add typography styling once specified by design
-  const finalClassName = {}; //classnames(className, baseStyles.base, baseStyles[type], baseStyles[color]);
+  const finalClassName = ''; //classnames(className, baseStyles.base, baseStyles[type], baseStyles[color]);
 
   const element = Styled[type] as StyledComponent<TextStyles, {}>;
+
+  const props = {
+    className: finalClassName,
+    'data-test': 'component-text',
+    htmlFor: htmlFor,
+  };
+
   return React.createElement(
     element,
-    { className: finalClassName, 'data-test': 'component-text', ...props },
+    { ...props, style: { color: color, fontWeight: bold ? 'bold' : 'normal' } },
     children,
   );
 };
