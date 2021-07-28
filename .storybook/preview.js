@@ -14,8 +14,9 @@ export const decorators = [
     <div
       style={{
         position: 'relative',
-        width: 'calc(100vw - 2rem)',
-        height: 'calc(100vh - 2rem)',
+        width: 'calc(100vw - 4rem)',
+        height: 'calc(100vh - 4rem)',
+        padding: '1rem',
         background: 'white',
         margin: 0,
         display: 'flex',

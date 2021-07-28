@@ -5,6 +5,11 @@ const color = {
     blue: '#222955',
     blueDark: '#122035',
   },
+  shadow: {
+    blue: '#EAEEF3',
+    grey: '#f3f3f3',
+    red: '#f9e5e2',
+  },
   base: {
     white: '#FDFDFD',
     ivory: '#F8F8F8',
