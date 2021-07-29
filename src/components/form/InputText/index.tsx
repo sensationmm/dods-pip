@@ -10,6 +10,7 @@ const InputText: React.FC<InputTextProps> = ({
   isDisabled = false,
   hasError,
   helperText,
+  onChange,
 }) => {
   return (
     <Input
@@ -20,6 +21,7 @@ const InputText: React.FC<InputTextProps> = ({
       isDisabled={isDisabled}
       hasError={hasError}
       helperText={helperText}
+      onChange={onChange}
     />
   );
 };

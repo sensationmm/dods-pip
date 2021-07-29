@@ -14,6 +14,7 @@ export interface InputBaseProps {
   isDisabled?: boolean;
   hasError?: boolean;
   helperText?: string;
+  onChange: (val: any) => void;
 }
 
 const InputBase: React.FC<InputBaseProps> = ({
@@ -23,6 +24,7 @@ const InputBase: React.FC<InputBaseProps> = ({
   isDisabled = false,
   hasError = false,
   helperText,
+  onChange,
 }) => {
   return (
     <Styled.wrapper data-test="component-input-base">
@@ -31,6 +33,7 @@ const InputBase: React.FC<InputBaseProps> = ({
         className={classNames({ error: hasError, disabled: isDisabled })}
         type={type}
         value={value || label}
+        onChange={onChange}
       />
       {helperText && (
         <Text
