@@ -11,7 +11,7 @@ import IconLibrary from '../src/components/Icon/assets';
   {Object.keys(IconLibrary).map((iconName, count) => {
     const Icon = IconLibrary[iconName];
     return (
-      <IconItem name={iconName}>
+      <IconItem name={iconName} key={`icon-${count}`}>
         <Icon />
       </IconItem>
     );
