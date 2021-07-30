@@ -7,8 +7,8 @@ const color = {
   },
   shadow: {
     blue: '#EAEEF3',
-    grey: '#f3f3f3',
-    red: '#f9e5e2',
+    grey: '#f5f5f6',
+    red: '#f9ecea',
   },
   base: {
     white: '#FDFDFD',
