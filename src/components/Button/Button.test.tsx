@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import Button from '.';
 import * as Styled from './Button.styles';
 import Icon from '../Icon';
+import { Icons } from '../Icon/assets';
 
 describe('Button', () => {
   it('renders without error', () => {
@@ -38,7 +39,7 @@ describe('Button', () => {
   });
 
   it('renders icon override', () => {
-    const wrapper = shallow(<Button type={'secondary'} icon={'IconAdd'} />);
+    const wrapper = shallow(<Button type={'secondary'} icon={Icons.IconAdd} />);
     const component = wrapper.find('[data-test="component-button"]');
     const button = wrapper.childAt(0);
 
