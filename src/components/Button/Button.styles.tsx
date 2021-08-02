@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 import color from '../../globals/color';
+import spacing from '../../globals/spacing';
+import { Icon } from '../Icon/Icon.styles';
 
 export const wrapper = styled.div``;
 
@@ -9,9 +11,11 @@ const base = styled.button`
   border-width: 1px;
   border-style: solid;
   width: 135px;
+  padding: 0 ${spacing(3)};
   height: 40px;
   border-radius: 4px;
   cursor: pointer;
+  position: relative;
 
   &.disabled {
     pointer-events: none;
@@ -20,6 +24,30 @@ const base = styled.button`
   &.small {
     height: 32px;
     font-size: 0.75em;
+  }
+
+  &.icon {
+    text-align: left;
+
+    ${Icon} {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.iconLeft {
+      padding-left: ${spacing(11)};
+
+      ${Icon} {
+        left: ${spacing(3)};
+      }
+    }
+
+    &.iconRight {
+      ${Icon} {
+        right: ${spacing(3)};
+      }
+    }
   }
 `;
 

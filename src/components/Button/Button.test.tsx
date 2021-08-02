@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Button from '.';
 import * as Styled from './Button.styles';
+import Icon from '../Icon';
 
 describe('Button', () => {
   it('renders without error', () => {
@@ -33,6 +34,19 @@ describe('Button', () => {
     const button = wrapper.childAt(0);
     expect(button.type().componentStyle.componentId).toEqual(
       Styled.text.componentStyle.componentId,
+    );
+  });
+
+  it('renders icon override', () => {
+    const wrapper = shallow(<Button type={'secondary'} icon={'IconAdd'} />);
+    const component = wrapper.find('[data-test="component-button"]');
+    const button = wrapper.childAt(0);
+
+    const icon = wrapper.find(Icon);
+
+    expect(icon.length).toEqual(1);
+    expect(button.type().componentStyle.componentId).toEqual(
+      Styled.primary.componentStyle.componentId,
     );
   });
 });

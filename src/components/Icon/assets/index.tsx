@@ -5,6 +5,7 @@ import IconSearch from './icon-search.svg';
 import IconShow from './icon-show.svg';
 import IconHide from './icon-hide.svg';
 import IconCalendar from './icon-calendar.svg';
+import IconAdd from './icon-add.svg';
 
 type TypeIconLibrary = {
   [key in Icons]: string;
@@ -18,6 +19,7 @@ export enum Icons {
   IconShow = 'IconShow',
   IconTick = 'IconTick',
   IconTickBold = 'IconTickBold',
+  IconAdd = 'IconAdd',
 }
 
 const IconLibrary = {
@@ -28,6 +30,7 @@ const IconLibrary = {
   IconShow,
   IconTick,
   IconTickBold,
+  IconAdd,
 } as TypeIconLibrary;
 
 export default IconLibrary;

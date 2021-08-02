@@ -26,4 +26,5 @@ Default.args = {
   label: 'Label',
   disabled: false,
   isSmall: false,
+  iconAlignment: 'left',
 };
