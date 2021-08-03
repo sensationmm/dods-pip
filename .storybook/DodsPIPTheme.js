@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming';
-import Logo from '../src/assets/logo-white.png';
+import Logo from '../src/assets/logo-white-dods-pip.png';
 import color from '../src/globals/color';
 
 export default create({
