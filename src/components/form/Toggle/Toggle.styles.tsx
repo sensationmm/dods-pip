@@ -47,7 +47,7 @@ export const toggle = styled.div`
   border-radius: 12px;
 
   &:hover {
-    background: ${hexAToRGBA(color.base.black, opacity.low)};
+    background: ${color.shadow.grey};
   }
 
   &.disabled {

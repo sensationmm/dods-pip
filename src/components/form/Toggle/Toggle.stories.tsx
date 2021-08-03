@@ -15,3 +15,8 @@ export default {
 const Template: Story<ToggleProps> = (args) => <Toggle {...args} />;
 
 export const Primary = Template.bind({});
+
+Primary.args = {
+  isActive: false,
+  isDisabled: false,
+};

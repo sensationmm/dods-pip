@@ -18,7 +18,11 @@ const Template: Story<IRadioProps> = (args) => <Radio {...args} />;
 
 export const Primary = Template.bind({});
 
-Primary.args = {};
+Primary.args = {
+  label: '',
+  isChecked: false,
+  isDisabled: false,
+};
 
 Primary.parameters = {
   controls: { include: ['label', 'isChecked', 'isDisabled', 'onChange'] },

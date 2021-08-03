@@ -30,7 +30,7 @@ export const checkboxToggle = styled.div`
 
   &:hover {
     border-color: ${color.theme.blue};
-    background: ${hexAToRGBA(color.theme.blueMid, opacity.high)};
+    background: ${color.shadow.blue};
   }
 
   &.disabled {

@@ -7,11 +7,19 @@ export default {
   component: Checkbox,
   title: 'Form/Checkbox',
   controls: { hideNoControlsWarning: true },
-  argTypes: { onClick: { action: 'clicked' } },
+  argTypes: { onChange: { action: 'clicked' } },
 } as Meta;
 
 const Template: Story<CheckboxProps> = (args) => <Checkbox {...args} />;
 
 export const Primary = Template.bind({});
 
-Primary.args = {};
+Primary.args = {
+  label: '',
+  isChecked: false,
+  isDisabled: false,
+};
+
+Primary.parameters = {
+  controls: { exclude: ['id'] },
+};

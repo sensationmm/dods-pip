@@ -13,7 +13,13 @@ const Template: Story<InputPasswordProps> = (args) => <InputPassword {...args} /
 
 export const Primary = Template.bind({});
 
-Primary.args = {};
+Primary.args = {
+  label: '',
+  value: '',
+  isDisabled: false,
+  hasError: false,
+  helperText: '',
+};
 
 Primary.parameters = {
   controls: { exclude: ['type'] },
