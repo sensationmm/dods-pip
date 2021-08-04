@@ -47,4 +47,18 @@ describe('InputText', () => {
     const component = wrapper.find(Icon);
     expect(component.props().color).toEqual(color.alert.red);
   });
+
+  it('fires onChange method', () => {
+    const typeWatcher = jest.fn();
+    const wrapper = shallow(<InputText label="Example" value={''} onChange={typeWatcher} />);
+    const component = wrapper.find('[data-test="component-input-text"]');
+    component.simulate('focus');
+    component.simulate('change', { target: { value: 'new' } });
+    expect(typeWatcher).toHaveBeenCalledTimes(1);
+    expect(typeWatcher).toHaveBeenCalledWith('new');
+  });
+
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
 });

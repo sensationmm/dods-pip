@@ -34,7 +34,7 @@ const InputSearch: React.FC<InputSearchProps> = ({
         isDisabled={isDisabled}
         hasError={hasError}
         helperText={helperText}
-        onChange={onChange}
+        onChange={(e) => onChange(e.target.value)}
       />
     </Styled.wrapper>
   );

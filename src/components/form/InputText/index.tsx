@@ -30,7 +30,7 @@ const InputText: React.FC<InputTextProps> = ({
         isDisabled={isDisabled}
         hasError={hasError}
         helperText={helperText}
-        onChange={onChange}
+        onChange={(e) => onChange(e.target.value)}
       />
       {icon && (
         <Icon

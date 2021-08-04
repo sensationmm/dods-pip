@@ -29,7 +29,7 @@ const InputPassword: React.FC<InputPasswordProps> = ({
         isDisabled={isDisabled}
         hasError={hasError}
         helperText={helperText}
-        onChange={onChange}
+        onChange={(e) => onChange(e.target.value)}
       />
       <Styled.toggle onClick={() => setViewPassword(!viewPassword)} data-test="password-toggle">
         <Icon

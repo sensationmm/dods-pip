@@ -9,7 +9,6 @@ export const wrapper = styled.div`
   width: 100%;
 
   ${InputBase} {
-    width: calc(100% - ${spacing(14)});
     padding-right: ${spacing(11)};
   }
 `;

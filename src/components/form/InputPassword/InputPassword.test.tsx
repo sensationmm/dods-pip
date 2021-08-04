@@ -62,6 +62,16 @@ describe('InputPassword', () => {
     expect(setState).toHaveBeenCalledWith(true);
   });
 
+  it('fires onChange method', () => {
+    const typeWatcher = jest.fn();
+    const wrapper = shallow(<InputPassword label="Example" value={''} onChange={typeWatcher} />);
+    const component = wrapper.find('[data-test="component-input-password"]');
+    component.simulate('focus');
+    component.simulate('change', { target: { value: 'new' } });
+    expect(typeWatcher).toHaveBeenCalledTimes(1);
+    expect(typeWatcher).toHaveBeenCalledWith('new');
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });

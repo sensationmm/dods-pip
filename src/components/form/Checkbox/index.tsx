@@ -4,13 +4,14 @@ import color from '../../../globals/color';
 
 import Icon, { IconSize } from '../../Icon';
 import { Icons } from '../../Icon/assets';
+import Text from '../../Text';
 
 import * as Styled from './Checkbox.styles';
 
 export interface CheckboxProps {
   id: string;
   label: string;
-  isChecked?: boolean;
+  isChecked: boolean;
   onChange: (value: boolean) => void;
   isDisabled?: boolean;
 }
@@ -44,7 +45,9 @@ const Checkbox: React.FC<CheckboxProps> = ({ id, label, isChecked, onChange, isD
           )}
         </Component>
         <Styled.checkboxLabel htmlFor={id} className={classNames({ disabled: isDisabled })}>
-          {label}
+          <Text type="span" color={color.theme.blueMid} bold>
+            {label}
+          </Text>
         </Styled.checkboxLabel>
       </Styled.checkboxLayout>
     </Styled.checkbox>

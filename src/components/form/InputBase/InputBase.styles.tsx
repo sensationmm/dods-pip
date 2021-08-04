@@ -8,13 +8,13 @@ export const wrapper = styled.div`
 
   span {
     display: block;
-    padding: ${spacing(2)} ${spacing(3)};
+    padding: ${spacing(2)} ${spacing(3)} 0 ${spacing(3)};
     margin: 0;
   }
 `;
 
 export const input = styled.input`
-  width: calc(100% - ${spacing(6)});
+  width: 100%;
   border: 0;
   outline: 0;
   background: ${color.shadow.blue};
@@ -24,6 +24,7 @@ export const input = styled.input`
   color: ${color.theme.blueMid};
   font-size: 14px;
   padding: ${spacing(3)};
+  box-sizing: border-box;
 
   &:hover,
   &:focus {
