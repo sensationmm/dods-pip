@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import spacing from '../../globals/spacing';
 
 export const wrapper = styled.div`
-  padding: ${spacing(35)} 0;
+  padding: 0;
+  min-height: 100px;
 `;
 
 export const logo = styled.div`

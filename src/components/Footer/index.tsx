@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Panel from '../../components/_layout/Panel';
 import color from '../../globals/color';
-import LogoWhite from '../../assets/logo-white-dods-pip.png';
+import LogoWhite from '../../assets/logo-white-dods-pip.svg';
 
 import * as Styled from './Footer.styles';
 
@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
     <Panel data-test="component-footer" bgColor={color.theme.blueDark}>
       <Styled.wrapper>
         <Styled.logo>
-          <Image src={LogoWhite} layout={'fill'} alt={'Dods PiP Logo'} />
+          <LogoWhite alt={'Dods PiP Logo'} />
         </Styled.logo>
       </Styled.wrapper>
     </Panel>
