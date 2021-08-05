@@ -1,12 +1,11 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 
-import Text, { ColorStyles } from '.';
+import Text from '.';
 
 describe('Text', () => {
   const props = {
     children: 'text goes here',
-    type: 'h3',
   };
 
   it('renders without error', () => {
@@ -21,7 +20,7 @@ describe('Text', () => {
 
   it('renders the given prop type as the html tag', () => {
     const wrapper = shallow(<Text {...props} />);
-    expect(wrapper.find('[data-test="component-text"]').type().target).toEqual(props.type);
+    expect(wrapper.find('[data-test="component-text"]').type().target).toEqual('p');
   });
 
   it('renders the given child in the html tag', () => {
@@ -43,5 +42,13 @@ describe('Text', () => {
 
     let containerStyle = component.get(0).props.style;
     expect(containerStyle.fontWeight).toEqual('bold');
+  });
+
+  it('renders the centered style', () => {
+    const wrapper = shallow(<Text {...props} center={true} />);
+    const component = wrapper.find('[data-test="component-text"]');
+
+    let containerStyle = component.get(0).props.style;
+    expect(containerStyle.textAlign).toEqual('center');
   });
 });

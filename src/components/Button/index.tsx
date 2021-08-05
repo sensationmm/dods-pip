@@ -11,19 +11,21 @@ type IconAlignment = 'left' | 'right';
 
 export interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   isSmall?: boolean;
-  type: ButtonType;
+  type?: ButtonType;
   icon?: Icons;
   iconAlignment?: IconAlignment;
+  inline?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  type,
+  type = 'primary',
   label,
   onClick,
   disabled = false,
   isSmall = false,
   icon,
   iconAlignment = 'left',
+  inline = false,
 }) => {
   let Component = Styled.primary;
 
@@ -42,7 +44,7 @@ const Button: React.FC<ButtonProps> = ({
   }
 
   return (
-    <div data-test="component-button">
+    <Styled.wrapper data-test="component-button">
       <Component
         className={classNames({
           disabled: disabled,
@@ -50,13 +52,14 @@ const Button: React.FC<ButtonProps> = ({
           icon: icon,
           iconLeft: icon && iconAlignment === 'left',
           iconRight: icon && iconAlignment === 'right',
+          inline: inline,
         })}
         onClick={onClick}
       >
         {label}
         {icon && <Icon src={icon} size={IconSize.large} color={color.base.white} />}
       </Component>
-    </div>
+    </Styled.wrapper>
   );
 };
 

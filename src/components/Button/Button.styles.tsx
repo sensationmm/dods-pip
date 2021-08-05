@@ -4,18 +4,28 @@ import color from '../../globals/color';
 import spacing from '../../globals/spacing';
 import { Icon } from '../Icon/Icon.styles';
 
-export const wrapper = styled.div``;
+export const wrapper = styled.div`
+  @media (max-width: 599px) {
+    display: flex;
+    justify-content: center;
+  }
+`;
 
 const base = styled.button`
   outline: 0;
   border-width: 1px;
   border-style: solid;
   width: 135px;
-  padding: 0 ${spacing(3)};
+  padding: 0 ${spacing(4)};
   height: 40px;
   border-radius: 4px;
   cursor: pointer;
   position: relative;
+  width: 100%;
+
+  &.inline {
+    width: auto;
+  }
 
   &.disabled {
     pointer-events: none;

@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import color from '../../../globals/color';
 import Leaves from '../../../assets/leaves.svg';
+import LeavesMobile from '../../../assets/leaves-mobile.svg';
 
 import * as Styled from './Panel.styles';
 
@@ -26,7 +27,8 @@ const Panel: React.FC<PanelProps> = ({
       <Styled.panel className={classNames({ padded: isPadded })}>{children}</Styled.panel>
       {isWelcome && (
         <Styled.leaves data-test="panel-leaves" aria-hidden="true">
-          <Leaves alt="" />
+          <Leaves id="desktop" alt="" />
+          <LeavesMobile id="mobile" alt="" />
         </Styled.leaves>
       )}
     </Styled.wrapper>

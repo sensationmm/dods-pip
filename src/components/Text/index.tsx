@@ -13,6 +13,7 @@ interface ITextProps {
   type?: TextStyles;
   color?: string;
   bold?: boolean;
+  center?: boolean;
   htmlFor?: string;
 }
 
@@ -20,8 +21,9 @@ const Text: React.FC<ITextProps> = ({
   className,
   children,
   type = 'p',
-  color = colorPalette.base.grey,
+  color = colorPalette.base.black,
   bold = false,
+  center = false,
   htmlFor,
 }) => {
   // TODO: add typography styling once specified by design
@@ -37,7 +39,14 @@ const Text: React.FC<ITextProps> = ({
 
   return React.createElement(
     element,
-    { ...props, style: { color: color, fontWeight: bold ? 'bold' : 'normal' } },
+    {
+      ...props,
+      style: {
+        color: color,
+        fontWeight: bold ? 'bold' : 'normal',
+        textAlign: center ? 'center' : 'left',
+      },
+    },
     children,
   );
 };

@@ -7,7 +7,7 @@ import { Icons } from '../Icon/assets';
 
 describe('Button', () => {
   it('renders without error', () => {
-    const wrapper = shallow(<Button type={'primary'} />);
+    const wrapper = shallow(<Button />);
     const component = wrapper.find('[data-test="component-button"]');
     expect(component.length).toEqual(1);
   });

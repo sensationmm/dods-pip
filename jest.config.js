@@ -18,7 +18,7 @@ module.exports = {
     'src/**/*.{ts,tsx}',
     '!src/**/*.stories.{ts,tsx}',
     '!src/**/*.styles.{ts,tsx}',
-    '!src/**/_app.tsx',
+    '!src/**/_app.page.tsx',
     '!coverage',
     '!src/globals/**/*.{ts,tsx}',
     '!src/pages/api/hello.ts',
